@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require 'net/http'
+require 'json'
+
+STATE = 'CO'
+CITY= 'Fort_Collins'
+API_KEY = '0123456789ABCDEF'
+
+uri = URI "http://api.wunderground.com/api/#{API_KEY}/conditions/q/#{STATE}/#{CITY}.json"
+data = JSON.parse(Net::HTTP.get uri)
+
+temp_f = data['current_observation']['temp_f']
+conditions = data['current_observation']['weather']
+
+puts "#{temp_f.to_i}, #{conditions}"
