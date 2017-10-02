@@ -5,5 +5,4 @@ be customized by editing the following variables:
 
 * `STATE` - two-letter postal state abbreviation for location
 * `CITY` - city for location
-* `API_KEY` - hex code for API access; get yours [here]
-  (https://www.wunderground.com/weather/api/)
+* `API_KEY` - hex code for API access; get yours [here](https://www.wunderground.com/weather/api/)
